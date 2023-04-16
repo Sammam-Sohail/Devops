@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <header>
+            <h1>Projects</h1>
+    </header>
+    
+</head>
+<body>
+    <form action="javascript:submit()"">
+        <label for="technology">Serch By technology:</label>
+        <input type="text" id="technology" name="tech"><br><br>
+        <input type="submit" value="Serach">
+    </form>
+    <div>
+    <ul>
+        <li>
+            <a href="Home.html" style="text-decoration: none;">Gene Match Finder, C</a>
+        </li>
+        <li>
+            <a href="Home.html" style="text-decoration: none;">Food ordering desktop application, C#</a>
+        </li>
+        <li>
+            <a href="Home.html" style="text-decoration: none;">graph path calculator, python</a>
+        </li>
+        <li>
+            <a href="Home.html" style="text-decoration: none;">Hadith Recommendation System, node js</a>
+        </li>
+        <li>
+            <a href="Home.html" style="text-decoration: none;">Library Management Sytem, node js</a>
+        </li>
+        <li>
+            <a href="Home.html" style="text-decoration: none;">Student Registration Web App, node js</a>
+        </li>
+        <li>
+            <a href="Home.html" style="text-decoration: none;">FYP, node js and python</a>
+        </li>
+    </ul>
+    </div>
+</body>
+</html>
+
+<script>
+
+    let submit = () => {
+
+      const projects = {
+        'Gene Match Finder' : 'C',
+        'Food ordering desktop application' : 'C#',
+        'graph path calculator' : 'python',
+        'Hadith Recommendation System' : 'node js',
+        'Library Management Sytem' : 'node js',
+        'Student Registration Web App' : 'node js',
+        'FYP' : 'node js',
+        'FYP' : 'python'
+      }
+
+      let res = ''
+        for (let key in projects) {
+
+            if (projects[key] == document.getElementsByName("tech")[0].value){
+                res = key + "," + res
+            }
+        }
+      alert(res);
+    };
+  
+ </script>
